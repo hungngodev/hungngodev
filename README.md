@@ -2,7 +2,8 @@
 <h3 align="center">A passionate CS students</h3>
 
 - 🔭 My proudest project: a forum for everyone to share their thoughts about their internships [Internship Forum](https://internshipforum-80226f6855ff.herokuapp.com/internships)
-  🌐 The legacy version[Internship Forum](https://internshipforumv1-1bc3d87eae50.herokuapp.com/internships/new)
+  <br/>
+  🌐 The legacy version: [Internship Forum](https://internshipforumv1-1bc3d87eae50.herokuapp.com/internships/new)
 
 - 🎨 Another handy website to choose your dream color!! [ChromaMix](https://hungngodev.github.io/ChromaMix/)
 
