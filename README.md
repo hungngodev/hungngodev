@@ -1,3 +1,7 @@
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hungngodev&card_width=1000&theme=moltack)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hungngodev&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&card_width=1000&theme=moltack&show_icons=true)
+
 <h1 align="center">Hi 👋, I'm Hung Ngo</h1>
 <h3 align="center">A passionate CS students</h3>
 - 👨‍💻 More information about me https://hungngo.vercel.app/
