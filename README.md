@@ -1,6 +1,6 @@
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hungngodev&card_width=1000&theme=moltack)
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hungngodev&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&card_width=1000&theme=moltack&show_icons=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hungngodev&card_width=1000&theme=nightowl)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=hungngodev&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&card_width=1000&theme=nightowl&show_icons=true)
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
 
 <h1 align="center">Hi 👋, I'm Hung Ngo</h1>
