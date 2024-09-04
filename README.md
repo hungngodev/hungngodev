@@ -13,6 +13,8 @@
 - 🔭 Look for internships? I have created a forum for everyone to share their thoughts about their internships [Internship Forum](https://internshipforum-80226f6855ff.herokuapp.com/internships) 🌐 The legacy version: [Internship ForumV1](https://internshipforumv1-1bc3d87eae50.herokuapp.com/internships/new)
   
 - 💻 Want to do Leetcode with your buddies? Check out for my Google Chrome extension Code Buddy (coming soon)
+
+- 📦 Do you need a customizable data table component written in React? Looking forward to my npm packages (coming soon)
   
 - 🎨 Another handy website to choose your dream color!! [ChromaMix](https://hungngodev.github.io/ChromaMix/)
 
