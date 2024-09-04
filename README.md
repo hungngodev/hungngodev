@@ -5,10 +5,15 @@
 
 <h1 align="center">Hi 👋, I'm Hung Ngo</h1>
 <h3 align="center">A passionate CS students</h3>
+
 - 👨‍💻 More information about me https://hungngo.vercel.app/
+
 - 🍳 Don't know what to eat? Visit our website to find some meals that you would love to try [Flavorie](https://flavorie.xyz/)
+  
 - 🔭 Look for internships? I have created a forum for everyone to share their thoughts about their internships [Internship Forum](https://internshipforum-80226f6855ff.herokuapp.com/internships) 🌐 The legacy version: [Internship ForumV1](https://internshipforumv1-1bc3d87eae50.herokuapp.com/internships/new)
+  
 - 💻 Want to do Leetcode with your buddies? Check out for my Google Chrome extension Code Buddy (coming soon)
+  
 - 🎨 Another handy website to choose your dream color!! [ChromaMix](https://hungngodev.github.io/ChromaMix/)
 
 - 📫 How to reach me **hungngo1607@gmail.com**
