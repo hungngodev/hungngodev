@@ -6,7 +6,7 @@
 <h1 align="center">Hi 👋, I'm Hung Ngo</h1>
 <h3 align="center">A passionate CS students</h3>
 
-- 👨‍💻 More information about me https://hungngo.vercel.app/
+- 👨‍💻 More information about me https://hungngo.me/
 
 - 🍳 Don't know what to eat? Visit our website to find some meals that you would love to try [Flavorie](https://flavorie.xyz/)
   
