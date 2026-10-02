@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="184" viewBox="0 0 880 184" role="img" aria-labelledby="banner-title banner-description">
+  <title id="banner-title">Hung's keyboard lab</title>
+  <desc id="banner-description">An illustrative nine-key macropad connects to software, systems, and tools through purple circuit traces. A single signal travels from the center key to software, then stops after three seconds.</desc>
+  <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="0.8" fill="#D9CDEE"/></pattern></defs>
+  <rect width="880" height="184" rx="14" fill="#F6F3FC"/>
+  <rect width="880" height="184" rx="14" fill="url(#grid)" opacity="0.65"/>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace">
+    <g fill="none" stroke="#DCD3EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M116 92 H232 Q250 92 250 84 H340"/>
+      <path d="M340 84 H478 Q492 84 492 70 V54 Q492 42 504 42 H524 Q536 42 536 54 V70 Q536 84 550 84"/>
+      <path d="M550 84 H680 Q696 84 696 100 V116 Q696 128 708 128 H720 Q732 128 732 116 V100 Q732 84 746 84"/>
+    </g>
+    <rect x="32" y="31" width="168" height="135" rx="14" fill="#FFFFFF" stroke="#DCD3EE"/>
+    <g><rect x="48" y="45" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="68" y="62" text-anchor="middle" font-size="10" fill="#6E647C">{ }</text></g>
+  <g><rect x="96" y="45" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="116" y="62" text-anchor="middle" font-size="10" fill="#6E647C">&gt;_</text></g>
+  <g><rect x="144" y="45" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="164" y="62" text-anchor="middle" font-size="10" fill="#6E647C">git</text></g>
+  <g><rect x="48" y="79" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="68" y="96" text-anchor="middle" font-size="10" fill="#6E647C">C</text></g>
+  <g><rect x="96" y="79" width="40" height="27" rx="5" fill="#EDE5FB" stroke="#6D28D9"/><text x="116" y="96" text-anchor="middle" font-size="10" fill="#6D28D9">AI</text></g>
+  <g><rect x="144" y="79" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="164" y="96" text-anchor="middle" font-size="10" fill="#6E647C">fn</text></g>
+  <g><rect x="48" y="113" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="68" y="130" text-anchor="middle" font-size="10" fill="#6E647C">[ ]</text></g>
+  <g><rect x="96" y="113" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="116" y="130" text-anchor="middle" font-size="10" fill="#6E647C">go</text></g>
+  <g><rect x="144" y="113" width="40" height="27" rx="5" fill="#F6F3FC" stroke="#DCD3EE"/><text x="164" y="130" text-anchor="middle" font-size="10" fill="#6E647C">+</text></g>
+    <circle cx="48" cy="151" r="2" fill="#6D28D9"/>
+    <text x="58" y="154" font-size="8" letter-spacing="1.2" fill="#6E647C">KEYBOARD LAB</text>
+    <g fill="#FFFFFF" stroke="#DCD3EE">
+      <rect x="340" y="48" width="138" height="72" rx="10"/>
+      <rect x="550" y="48" width="130" height="72" rx="10"/>
+      <rect x="746" y="48" width="102" height="72" rx="10"/>
+    </g>
+    <g fill="none" stroke="#6D28D9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M398 66 L390 74 L398 82 M420 66 L428 74 L420 82 M413 65 L405 83"/>
+      <ellipse cx="615" cy="67" rx="13" ry="5"/><path d="M602 67 V80 C602 87 628 87 628 80 V67 M602 74 C602 81 628 81 628 74"/>
+      <rect x="786" y="66" width="22" height="18" rx="3"/><path d="M791 71 L795 75 L791 79 M799 79 H803"/>
+    </g>
+    <g font-size="10" fill="#241A33" text-anchor="middle" letter-spacing="0.5">
+      <text x="409" y="105">software</text><text x="615" y="105">systems</text><text x="797" y="105">tools</text>
+    </g>
+    <g fill="#DCD3EE"><circle cx="550" cy="84" r="2.5"/><circle cx="746" cy="84" r="2.5"/></g>
+    <g id="signal" fill="#6D28D9"><circle r="9" opacity="0.12"/><circle r="3.5"/><animateMotion path="M116 92 H232 Q250 92 250 84 H340" dur="3s" begin="0s" repeatCount="1" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 0.1 0.25 1"/></g>
+  </g>
+</svg>
+

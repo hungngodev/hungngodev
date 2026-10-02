@@ -1,5 +1,13 @@
 # Hi, I'm Hung Ngo 👋
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="./assets/keyboard-lab-dark.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/keyboard-lab-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/keyboard-lab-dark-animated.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/keyboard-lab-light-animated.svg">
+  <img src="./assets/keyboard-lab-light.svg" width="880" alt="An illustrative nine-key macropad connected to software, systems, and tools through purple circuit traces.">
+</picture>
+
 I like following a problem through every layer until I understand why it behaves the way it does. That has taken me from payment events and database migrations to real time AI agents, keyboard firmware, and the tools I use to build all of them.
 
 I'm studying Computer Science, Statistics and Data Science at UMass Amherst, graduating in December 2026. My recent internships have been at **Rippling, Google, and PlayStation**.
@@ -48,6 +56,11 @@ Lately, I've been designing an adaptive macropad with nine keys, individual OLED
 Purple is still my favorite color. Some things survive every refactor.
 
 ## Languages and tools
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/skills-dark.svg">
+  <img src="./assets/skills-light.svg" width="272" alt="Python, TypeScript, Go, C++, PostgreSQL, Redis, Docker, Kubernetes, AWS, and Google Cloud.">
+</picture>
 
 **Languages:** Python, TypeScript/JavaScript, Go, C++, Java, and C for firmware experiments.  
 **Systems and applications:** Kafka, Redis, PostgreSQL, WebRTC, Django, React, Next.js, Docker, Kubernetes, AWS, and Google Cloud.
