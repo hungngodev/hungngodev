@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="220" viewBox="0 0 272 220" role="img" aria-labelledby="title desc">
+  <title id="title">CodeBuddy</title>
+  <desc id="desc">Live collaborative coding with WebRTC, Firebase, and Monaco. An editor connects to a peer mesh.</desc>
+  <rect x="1" y="1" width="270" height="218" rx="16" fill="#f5f3ff" stroke="#ddd4ef"/>
+  <text x="20" y="33" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#243b53">CodeBuddy</text>
+  <rect x="16" y="50" width="240" height="90" rx="10" fill="#ffffff"/>
+  <rect x="27" y="64" width="90" height="64" rx="6" fill="#f5f3ff" stroke="#6f42c1" stroke-width="1.5"/>
+  <path d="M27 79 H117" stroke="#ddd4ef"/>
+  <g><circle cx="36" cy="72" r="2" fill="#6f42c1"/><circle cx="44" cy="72" r="2" fill="#b56c09"/><circle cx="52" cy="72" r="2" fill="#16867d"/></g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 94 L37 100 L42 106 M57 94 L62 100 L57 106 M51 93 L47 107" stroke="#6f42c1" stroke-width="2"/>
+    <path d="M74 95 H99 M74 104 H91 M37 117 H77" stroke="#16867d" stroke-width="2"/>
+    <path d="M117 96 H148 M148 96 L174 71 L222 97 L174 124 Z M148 96 L174 124 M174 71 V124 M148 96 H222" stroke="#ddd4ef" stroke-width="1.6"/>
+    <path d="M117 96 H148 L174 71" stroke="#6f42c1" stroke-width="1.8"/>
+  </g>
+  <g stroke-width="1.5">
+    <circle cx="148" cy="96" r="7" fill="#ffffff" stroke="#6f42c1"/>
+    <circle cx="174" cy="71" r="7" fill="#ffffff" stroke="#16867d"/>
+    <circle cx="222" cy="97" r="7" fill="#ffffff" stroke="#b56c09"/>
+    <circle cx="174" cy="124" r="7" fill="#ffffff" stroke="#16867d"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="16">
+    <text x="20" y="170" fill="#243b53">Live collaborative coding</text>
+    <text x="20" y="199" fill="#536779">WebRTC · Firebase · Monaco</text>
+  </g>
+</svg>

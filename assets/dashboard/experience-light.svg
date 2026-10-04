@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="248" viewBox="0 0 840 248" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering experience</title>
+  <desc id="desc">PlayStation, May through August 2025, data transformation. Google, January through May 2026, realtime AI agents. Rippling, May through August 2026, payment correctness.</desc>
+  <rect x="1" y="1" width="838" height="246" rx="18" fill="#f5f3ff" stroke="#ddd4ef"/>
+  <text x="24" y="37" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#243b53">Experience</text>
+  <path d="M140 83 H700" fill="none" stroke="#ddd4ef" stroke-width="3"/>
+  <path d="M140 83 H420" fill="none" stroke="#6f42c1" stroke-width="3"/>
+  <g fill="#ffffff" stroke="#ddd4ef">
+    <rect x="24" y="111" width="232" height="111" rx="12"/>
+    <rect x="304" y="111" width="232" height="111" rx="12"/>
+    <rect x="584" y="111" width="232" height="111" rx="12"/>
+  </g>
+  <g fill="#ffffff" stroke-width="2">
+    <circle cx="140" cy="83" r="15" stroke="#6f42c1"/>
+    <circle cx="420" cy="83" r="15" stroke="#16867d"/>
+    <circle cx="700" cy="83" r="15" stroke="#b56c09"/>
+  </g>
+  <g fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M134 78 H146 V82 H134 Z M134 85 H146 V89 H134 Z" stroke="#6f42c1"/>
+    <path d="M412 83 H416 L419 78 L423 88 L426 83 H428" stroke="#16867d"/>
+    <path d="M694 83 L699 87 L706 79" stroke="#b56c09"/>
+  </g>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <g font-size="22" font-weight="700" fill="#243b53">
+      <text x="140" y="146">PlayStation</text><text x="420" y="146">Google</text><text x="700" y="146">Rippling</text>
+    </g>
+    <g font-size="18" fill="#536779">
+      <text x="140" y="175">May–Aug 2025</text><text x="420" y="175">Jan–May 2026</text><text x="700" y="175">May–Aug 2026</text>
+    </g>
+    <g font-size="18">
+      <text x="140" y="203" fill="#6f42c1">Data transformation</text><text x="420" y="203" fill="#16867d">Realtime AI agents</text><text x="700" y="203" fill="#b56c09">Payment correctness</text>
+    </g>
+  </g>
+</svg>

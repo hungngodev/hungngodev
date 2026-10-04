@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="220" viewBox="0 0 272 220" role="img" aria-labelledby="title desc">
+  <title id="title">Flavorie</title>
+  <desc id="desc">Groceries into meals with React and Redis. Pantry ingredients lead to a recipe card.</desc>
+  <rect x="1" y="1" width="270" height="218" rx="16" fill="#f5f3ff" stroke="#ddd4ef"/>
+  <text x="20" y="33" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#243b53">Flavorie</text>
+  <rect x="16" y="50" width="240" height="90" rx="10" fill="#ffffff"/>
+  <g fill="none" stroke="#ddd4ef" stroke-width="1.5" stroke-linecap="round"><path d="M28 70 V127 H119 V70 M28 100 H119"/></g>
+  <g stroke-width="1.5">
+    <rect x="37" y="75" width="19" height="21" rx="4" fill="#f5f3ff" stroke="#b56c09"/><path d="M38 75 H55" stroke="#b56c09" stroke-width="3"/>
+    <rect x="67" y="69" width="18" height="27" rx="4" fill="#f5f3ff" stroke="#6f42c1"/><path d="M68 69 H84" stroke="#6f42c1" stroke-width="3"/>
+    <path d="M102 94 Q92 81 101 73 Q112 81 102 94 Z" fill="#16867d" stroke="#16867d"/>
+    <path d="M102 89 V96" stroke="#ffffff"/>
+    <circle cx="50" cy="115" r="7" fill="#b56c09"/><path d="M47 108 L50 105 L53 108" fill="none" stroke="#16867d"/>
+    <path d="M70 110 Q88 103 99 115 Q81 125 70 110 Z" fill="#16867d"/>
+  </g>
+  <path d="M124 95 H143 M137 89 L143 95 L137 101" fill="none" stroke="#6f42c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="154" y="60" width="91" height="70" rx="7" fill="#f5f3ff" stroke="#6f42c1" stroke-width="1.5"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M170 88 H198 Q197 100 184 100 Q172 100 170 88 Z M198 91 H205 M177 81 V76 M185 81 V73 M193 81 V76" stroke="#b56c09" stroke-width="1.8"/>
+    <path d="M168 113 L171 116 L176 110" stroke="#16867d" stroke-width="1.8"/>
+    <path d="M183 114 H228 M214 77 H229 M214 85 H225" stroke="#536779" stroke-width="1.8"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="16">
+    <text x="20" y="170" fill="#243b53">Groceries into meals</text>
+    <text x="20" y="199" fill="#536779">React · Redis</text>
+  </g>
+</svg>

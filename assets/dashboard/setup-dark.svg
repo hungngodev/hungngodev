@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="420" viewBox="0 0 840 420" role="img" aria-labelledby="title description">
+<title id="title">Hung’s shared agent setup</title>
+<desc id="description">Shared botfile and sync-mcp configuration feeds Codex, Claude, Gemini, and Pi, which use code graphs, documentation, and Fusion. Obsidian holds knowledge and Notion holds tasks. Cognee, Mem0, and ACPX remain experimental. A single signal follows the main route once over three seconds.</desc>
+<style>.signal{animation:route 3s cubic-bezier(.25,.65,.35,1) 1 forwards}@keyframes route{to{transform:translateX(551px)}}@media(prefers-reduced-motion:reduce){.signal{animation:none;display:none}}</style>
+<rect x=".75" y=".75" width="838.5" height="418.5" rx="20" fill="#011627" stroke="#294861" stroke-width="1.5"/>
+<g font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"><text x="36" y="49" font-size="30" font-weight="700" fill="#d6deeb">My setup</text><text x="36" y="79" font-size="18" fill="#a8b7ca">One workflow. Tools chosen for each task.</text><g fill="#102a43" stroke="#294861" stroke-width="1.5">
+<rect x="36" y="109" width="218" height="143" rx="16"/><rect x="312" y="109" width="218" height="143" rx="16"/><rect x="588" y="109" width="216" height="143" rx="16"/>
+</g>
+<g font-size="18" font-weight="600" letter-spacing="1.3" fill="#a8b7ca">
+<text x="60" y="140">CONFIGURATION</text><text x="336" y="140">AGENTS</text><text x="612" y="140">TOOLS</text>
+</g>
+<g fill="#d6deeb" font-size="22"><text x="60" y="178">botfile</text><text x="60" y="211">sync-mcp</text></g>
+<g fill="#c792ea" font-size="20"><text x="336" y="178">Codex</text><text x="430" y="178">Claude</text><text x="336" y="211">Gemini</text><text x="430" y="211">Pi</text></g>
+<g fill="#d6deeb" font-size="20"><text x="612" y="178">Code graphs</text><text x="612" y="211">Docs</text><text x="687" y="211">Fusion</text></g>
+<path d="M145 239H696" fill="none" stroke="#7fdbca" stroke-opacity=".26" stroke-width="2"/>
+<g fill="#7fdbca" stroke="#011627" stroke-width="3"><circle cx="145" cy="239" r="5"/><circle cx="421" cy="239" r="5"/><circle cx="696" cy="239" r="5"/></g>
+<g stroke="#7fdbca" fill="none" stroke-width="2"><path d="m282 234 5 5-5 5"/><path d="m558 234 5 5-5 5"/></g>
+<circle id="route-signal" class="signal" cx="145" cy="239" r="5" fill="#ecc48d" stroke="#011627" stroke-width="2"/>
+<g fill="#102a43" stroke="#294861" stroke-width="1.5"><rect x="36" y="278" width="218" height="88" rx="16"/><rect x="312" y="278" width="218" height="88" rx="16"/><rect x="588" y="278" width="216" height="88" rx="16"/></g>
+<g fill="#a8b7ca" font-size="18"><text x="60" y="309">Knowledge</text><text x="336" y="309">Tasks</text><text x="612" y="309">Memory</text></g>
+<g fill="#d6deeb" font-size="23"><text x="60" y="344">Obsidian</text><text x="336" y="344">Notion</text><text x="612" y="333" font-size="20">Cognee / Mem0</text></g>
+<text x="612" y="357" font-size="18" fill="#c792ea">experimental</text>
+<rect x="36" y="379" width="255" height="34" rx="17" fill="#011627" stroke="#294861" stroke-dasharray="4 4"/>
+<text x="56" y="402" font-size="18" fill="#c792ea">ACPX · experimental</text>
+<text x="312" y="402" font-size="18" fill="#a8b7ca">Project sessions</text></g>
+</svg>

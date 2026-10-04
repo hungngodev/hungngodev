@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="468" viewBox="0 0 360 468" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering experience</title>
+  <desc id="desc">PlayStation, May through August 2025, data transformation. Google, January through May 2026, realtime AI agents. Rippling, May through August 2026, payment correctness.</desc>
+  <rect x="1" y="1" width="358" height="466" rx="18" fill="#f5f3ff" stroke="#ddd4ef"/>
+  <text x="24" y="38" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#243b53">Experience</text>
+  <path d="M46 108 V384" fill="none" stroke="#ddd4ef" stroke-width="3"/>
+  <path d="M46 108 V246" fill="none" stroke="#6f42c1" stroke-width="3"/>
+  <g fill="#ffffff" stroke="#ddd4ef">
+    <rect x="78" y="66" width="258" height="114" rx="12"/>
+    <rect x="78" y="204" width="258" height="114" rx="12"/>
+    <rect x="78" y="342" width="258" height="114" rx="12"/>
+  </g>
+  <g fill="#ffffff" stroke-width="2">
+    <circle cx="46" cy="108" r="15" stroke="#6f42c1"/>
+    <circle cx="46" cy="246" r="15" stroke="#16867d"/>
+    <circle cx="46" cy="384" r="15" stroke="#b56c09"/>
+  </g>
+  <g fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 103 H52 V107 H40 Z M40 110 H52 V114 H40 Z" stroke="#6f42c1"/>
+    <path d="M38 246 H42 L45 241 L49 251 L52 246 H54" stroke="#16867d"/>
+    <path d="M40 384 L45 388 L52 380" stroke="#b56c09"/>
+  </g>
+  <g font-family="system-ui, sans-serif">
+    <g font-size="22" font-weight="700" fill="#243b53">
+      <text x="94" y="99">PlayStation</text><text x="94" y="237">Google</text><text x="94" y="375">Rippling</text>
+    </g>
+    <g font-size="17" fill="#536779">
+      <text x="94" y="129">May–Aug 2025</text><text x="94" y="267">Jan–May 2026</text><text x="94" y="405">May–Aug 2026</text>
+    </g>
+    <g font-size="17">
+      <text x="94" y="157" fill="#6f42c1">Data transformation</text><text x="94" y="295" fill="#16867d">Realtime AI agents</text><text x="94" y="433" fill="#b56c09">Payment correctness</text>
+    </g>
+  </g>
+</svg>

@@ -7,20 +7,174 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+# One chart writer at a time, including manual and scheduled runs.
+concurrency:
+  group: profile-charts-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
+    timeout-minutes: 20
     steps:
+      # Preserve the original 3D contribution generator and its configuration.
       - uses: actions/checkout@v2
       - uses: yoshi389111/github-profile-3d-contrib@0.4.0
+        id: contrib
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+
+      - name: Prepare unpublished stats output
+        id: stats
+        continue-on-error: true
+        shell: bash
+        run: |
+          echo "year=$(date -u +%Y)" >> "$GITHUB_OUTPUT"
+          echo "directory=$RUNNER_TEMP/profile-stats" >> "$GITHUB_OUTPUT"
+          mkdir -p "$RUNNER_TEMP/profile-stats"
+
+      # Render away from tracked files. If any request fails, the last successful
+      # cards remain published; neither an error card nor partial refresh is pushed.
+      - name: Generate light stats
+        id: stats_light
+        if: ${{ steps.stats.outcome == 'success' }}
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21
+        with:
+          card: stats
+          core_version: "2.2.1"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          path: ${{ steps.stats.outputs.directory }}/stats-light.svg
+          options: >-
+            username=${{ github.repository_owner }}&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&include_all_commits=false&commits_year=${{ steps.stats.outputs.year }}&card_width=420&theme=nightowl&show_icons=true&line_height=22&disable_animations=true&title_color=6d28d9&icon_color=6d28d9&text_color=243244&bg_color=ffffff&border_color=d8d4e8&ring_color=008f77
+
+      - name: Generate dark stats
+        id: stats_dark
+        if: ${{ steps.stats.outcome == 'success' }}
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21
+        with:
+          card: stats
+          core_version: "2.2.1"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          path: ${{ steps.stats.outputs.directory }}/stats-dark.svg
+          options: >-
+            username=${{ github.repository_owner }}&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&include_all_commits=false&commits_year=${{ steps.stats.outputs.year }}&card_width=420&theme=nightowl&show_icons=true&line_height=22&disable_animations=true&title_color=c4b5fd&icon_color=c4b5fd&text_color=c7d1da&bg_color=011627&border_color=3d355e&ring_color=7de3c3
+
+      - name: Generate light languages
+        id: languages_light
+        if: ${{ steps.stats.outcome == 'success' }}
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21
+        with:
+          card: top-langs
+          core_version: "2.2.1"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          path: ${{ steps.stats.outputs.directory }}/languages-light.svg
+          options: >-
+            username=${{ github.repository_owner }}&layout=normal&langs_count=5&card_width=420&theme=nightowl&disable_animations=true&title_color=6d28d9&icon_color=6d28d9&text_color=243244&bg_color=ffffff&border_color=d8d4e8&ring_color=008f77
+
+      - name: Generate dark languages
+        id: languages_dark
+        if: ${{ steps.stats.outcome == 'success' }}
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21
+        with:
+          card: top-langs
+          core_version: "2.2.1"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+          path: ${{ steps.stats.outputs.directory }}/languages-dark.svg
+          options: >-
+            username=${{ github.repository_owner }}&layout=normal&langs_count=5&card_width=420&theme=nightowl&disable_animations=true&title_color=c4b5fd&icon_color=c4b5fd&text_color=c7d1da&bg_color=011627&border_color=3d355e&ring_color=7de3c3
+
+      - name: Validate every refreshed card before replacing tracked files
+        id: validate_stats
+        if: ${{ !cancelled() && steps.stats_light.outcome == 'success' && steps.stats_dark.outcome == 'success' && steps.languages_light.outcome == 'success' && steps.languages_dark.outcome == 'success' }}
+        continue-on-error: true
+        shell: bash
+        env:
+          STATS_DIRECTORY: ${{ steps.stats.outputs.directory }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          import shutil
+          import xml.etree.ElementTree as ET
+
+          source = Path(os.environ["STATS_DIRECTORY"])
+          names = (
+              "stats-light.svg", "stats-dark.svg",
+              "languages-light.svg", "languages-dark.svg",
+          )
+          namespace = "{http://www.w3.org/2000/svg}"
+          error_messages = (
+              "something went wrong", "please try again",
+              "could not fetch", "bad credentials", "rate limit",
+          )
+          for name in names:
+              path = source / name
+              root = ET.parse(path).getroot()
+              if root.tag != namespace + "svg":
+                  raise ValueError(f"{name}: not an SVG")
+              if root.attrib.get("width") != "420":
+                  raise ValueError(f"{name}: unexpected width")
+              text = " ".join(
+                  "".join(element.itertext())
+                  for element in root.iter()
+                  if element.tag in (namespace + "text", namespace + "title", namespace + "desc")
+              )
+              if not text.strip() or any(message in text.lower() for message in error_messages):
+                  raise ValueError(f"{name}: empty or error card")
+              if name.startswith("stats-"):
+                  required_labels = (
+                      "Total Stars", "Total Commits", "Total PRs",
+                      "Total PRs Merged", "Total PRs Reviewed",
+                      "Total Issues", "Total Discussions Started",
+                      "Total Discussions Answered", "Merged PRs Percentage", "Contributed to",
+                  )
+                  if not all(label in text for label in required_labels):
+                      raise ValueError(f"{name}: missing requested metrics")
+              elif "Most Used Languages" not in text or "%" not in text:
+                  raise ValueError(f"{name}: missing language data")
+
+          destination = Path("assets/stats")
+          destination.mkdir(parents=True, exist_ok=True)
+          for name in names:
+              shutil.copyfile(source / name, destination / name)
+          PY
+
       - name: Commit & Push
+        id: publish_charts
+        if: ${{ always() && !cancelled() && steps.contrib.outcome == 'success' }}
+        shell: bash
+        env:
+          STATS_OUTCOME: ${{ steps.validate_stats.outcome }}
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A .
+          git add -- profile-3d-contrib
+          if [ "$STATS_OUTCOME" = "success" ]; then
+            git add -- assets/stats
+          fi
+          if git diff --cached --quiet; then
+            echo "Charts are unchanged."
+            exit 0
+          fi
           git commit -m "generated"
           git push
+
+      - name: Report a failed stats refresh after the 3D publication attempt
+        if: ${{ always() && !cancelled() && steps.contrib.outcome == 'success' && steps.validate_stats.outcome != 'success' }}
+        shell: bash
+        run: |
+          echo "::error::Stats refresh failed or was incomplete. Existing stats cards were not staged; see the rendering and validation steps."
+          exit 1
