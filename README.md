@@ -77,10 +77,12 @@ I build reliable systems and useful AI.
 
 ## Keyboard & toolbox
 
+<p>
 <a href="https://github.com/hungngodev/Keyboard-json-file"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/dashboard/keyboard-dark.svg">
   <img src="./assets/dashboard/keyboard-light.svg" width="440" alt="Macropad concept, not completed hardware. C, ZMK, KMK, VIA/QMK, Fusion, and 3D printing.">
 </picture></a>
+</p>
 
 <!-- TOOLBOX:START -->
 <p align="center">
